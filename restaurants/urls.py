@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from pages.views import hello_world
-#from res_data.views import index
+from rest_framework.urlpatterns import format_suffix_patterns
+from res_data.views import restaurantListAll
+from res_data.views import restaurantListFilterName
+from res_data.views import restaurantListFilterDay
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world, name='hello'),
-    #path('csv/', index, name="csv")
+    path('restaurantall/', restaurantListAll.as_view()),
+    path('restaurant/<str:day>', restaurantListFilterDay.as_view()),
+    path('restaurantname/<str:keyword>', restaurantListFilterName.as_view())
 ]
