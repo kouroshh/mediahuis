@@ -25,7 +25,7 @@ SECRET_KEY = '5py)j%wkwe#x_0ywjvx0ejdj2)q(bg)m^epn*^zfsq33+&m(o7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 
 # Application definition
@@ -78,6 +78,15 @@ WSGI_APPLICATION = 'restaurants.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        # docker_config
+        # 'NAME': 'postgres',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'postgres',
+        # 'HOST': 'db',
+        # 'PORT': 5432
+
+        # local_config
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'restaurant_db',
         'USER': 'postgres',

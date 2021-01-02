@@ -44,7 +44,6 @@ class Command(BaseCommand):
                         res = Restaurant.objects.get(
                             restaurant_name=restaurant_name)
                     except Restaurant.DoesNotExist:
-                        print('not exits')
                         res = Restaurant(
                             restaurant_name=restaurant_name,
                             opening_days=open_days,
