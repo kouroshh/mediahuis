@@ -6,3 +6,7 @@ from django.shortcuts import render
 
 def hello_world(*args, **kwargs):
     return HttpResponse("<h1>Hello World!</h1>")
+
+
+def offers(request):
+    return render(request, 'pages/offers.html')

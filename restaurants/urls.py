@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from pages.views import hello_world
+from pages.views import offers
 from rest_framework.urlpatterns import format_suffix_patterns
 from res_data.views import restaurantListAll
 from res_data.views import restaurantListFilterName
@@ -26,5 +27,6 @@ urlpatterns = [
     path('hello/', hello_world, name='hello'),
     path('restaurantall/', restaurantListAll.as_view()),
     path('restaurant/<str:day>', restaurantListFilterDay.as_view()),
-    path('restaurantname/<str:keyword>', restaurantListFilterName.as_view())
+    path('restaurantname/<str:keyword>', restaurantListFilterName.as_view()),
+    path('offers/', offers, name='offers')
 ]
