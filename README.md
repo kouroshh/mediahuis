@@ -47,5 +47,5 @@ This application consists of two main api which are both GET:
    the response of calling this api on browser or CURL is the filttered list of restaurants that contains the exaxt keyword as the param. 
 
 There is also on static page called Offers:
- - http://127.0.0.1:8000/offers/
+ - http://0.0.0.0:8000/offers/
 
